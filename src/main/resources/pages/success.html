@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <br>
+    <h2 th:align="center"> تىزىملاش مۇۋەپپىقىيەتلىك بولدى</h2>
+    <br>
+    <div th:align="center" th:text="${data}"></div>
+    <br>
+    <br>
+    <div th:align="center">
+        <a th:href="@{/index}">بۇنى بېسىپ باش بەتكە قايتىڭ </a>
+        <br><br>
+        <a th:href="@{/form}">بۇنى بېسىپ خىزمەتچى تىزىملاش بېتىگە قايتىڭ </a>
+    </div>
+</body>
+</html>

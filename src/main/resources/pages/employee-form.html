@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Uyghur Java</title>
+</head>
+<body>
+    <div th:align="center">
+        <h2> خىزمەتچى تىزىملاش </h2>
+        <br>
+        <form th:action="@{/employee}"  method="post">
+            <table>
+                <tr>
+                    <td>Employee Id</td>
+                    <td><input type="text" name="id"/></td>
+                </tr>
+                <tr>
+                    <td>Employee Name</td>
+                    <td><input type="text" name="name"/></td>
+                </tr>
+                <tr>
+                    <td>Employee Designation</td>
+                    <td>
+                        <select name="designation">
+                            <option th:each="designation:${designationList}"
+                            th:text="${designation}"/>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" value="ساقلاڭ"/>
+        </form>
+    </div>
+</body>
+</html>
